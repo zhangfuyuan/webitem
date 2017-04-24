@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>必做1</title>
+
+<style>
+	
+	* {
+		padding: 0;
+		margin: 0;
+	}
+
+	.all {
+		width: 1000px;
+		margin: 0 auto;
+		font-family: "微软雅黑";
+	}
+
+	.ro_logo {
+		float: left;
+	}
+		
+	.ro_sou {
+		float: right;
+		margin-top: 40px;
+		margin-right: 20px;
+	}
+
+	.ro_sou_text {
+		background-color: #f1f1f1;
+		width: 150px;
+		height: 30px;
+		border: 0;
+		outline:none;
+	}
+
+	.ro_sou_button {
+		background-image: url(img/1_sou.jpg);
+		background-repeat: no-repeat;
+		width: 25px;
+		height: 30px;
+		background-color: #f1f1f1;
+		border: 0;
+		background-position: center;
+		background-size: 80%;	
+	}
+
+	.nav {
+		float: left;
+		width: 1020px;
+		/*height: 50px;*/
+	}
+
+	.nav ul{
+		list-style: none;
+	}
+
+	.nav ul li {
+		float: left;
+		width: 124px;
+		height: 50px;
+		background-color: #2f2f2f;
+		border-left: 1px solid gray;
+		text-align: center;
+	}
+
+	.nav ul li a {
+		display: block;
+		line-height: 50px; 
+		color: white;
+		text-decoration: none;
+	}
+
+	.nav ul li a:hover{
+		background-color: #DC143C;
+	}
+
+	.content1 {
+		width: 1000px;
+	}
+
+	.co1_l {
+		float: left;
+		width: 50%;
+	}
+
+	.co1_l h3 {
+		font-family: "微软雅黑";
+		font-weight: normal;
+		font-size: 18px;
+		margin: 20px 15px;
+	}
+
+	.co1_l ul {
+		width: 90%;
+		margin-left: 30px;
+		float: left;
+	}
+
+	.co1_l ul li {
+		font-size: 12px;
+		line-height: 25px;
+		font-family: "微软雅黑";
+		color: #696969;
+	}
+
+	.co1_l ul li a {
+		text-decoration: none;
+		color: black;
+	}
+
+	.co1_l ul li a:hover {
+		color: red;
+	}
+
+	.co1_lr {
+		float: right;
+		color: gray;
+	}
+
+	.co1_c {
+		float: left;
+		width: 25%;
+		height: 230px;
+		background: #f1f1f1;
+	}
+
+	.co1_c h3 {
+		font-weight: normal;
+		font-size: 18px;
+		margin: 20px 25px;
+	
+	}
+
+	.co1_c .co1_c1 {
+		width: 150px;
+		font-size: 15px;
+		margin-left: 25px;
+		margin-top: 35px;
+		color: #575757;
+		overflow: hidden;
+		height: 50px; 
+	}
+
+	.co1_c .co1_c2{
+		width: 200px;
+		font-size: 12px;
+		margin-left: 25px;
+		margin-top: 20px;
+		color: #949494;
+		overflow: hidden;
+		height: 50px; 
+	}
+
+	.co1_r {
+		float: right;
+		width: 25%;
+		height: 230px;
+		background-image: url(img/1_zp1.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 110%;
+	
+	}
+
+	.co1_r h3 {
+		font-weight: normal;
+		font-size: 18px;
+		margin: 20px 25px;
+	}
+
+	.co1_r p {
+		width: 200px;
+		font-size: 13px;
+		margin-left: 25px;
+		margin-top: 15px;
+		color: #5b5b5b;
+		overflow: hidden;
+		height: 50px; 
+	}
+
+	.co1_r a {
+		display: block;
+		margin-left: 25px;
+		margin-top: 50px;
+	}
+
+	.content2 {
+		float: left;
+	}
+
+	.content2  h3 {
+		display: block;
+		font-weight: normal;
+		font-size: 18px;
+		margin: 20px 20px 15px;
+	}
+
+	.content2  .co2 {
+		float: left;
+		width: 21%;
+		height: 120px;
+		margin: 0 20px;
+	}
+
+	.content2  .co2 .co2_pho {
+		float: left; 
+		
+	}
+
+	.content2  .co2 .co2_p {
+		float: left;
+		color: gray;
+		font-size: 11px;
+		padding: 7px;
+	}
+
+	.footer {
+		float: left;
+		width: 1000px;
+		height: 250px;
+		background: #e5e5e5;
+		margin-top: 100px;
+	}
+
+	.footer .fo_l {
+		width: 43%;
+		float: left;
+		padding: 30px;
+	}
+
+	.footer .fo_l .fo_l_h {
+		border-bottom: 1px solid #C0C0C0;
+		padding-bottom: 10px;
+		padding-left: 5px;
+	}
+
+	.footer .fo_l .fo_l_h h3{
+		font-weight: normal;
+		font-size: 16px;
+		/*margin: 20px 25px;*/
+		color: gray;
+	}
+
+	.footer .fo_l .fo_l_c {
+		padding-top: 10px;
+		padding-left: 5px;
+	}
+
+	.footer .fo_l .fo_l_c ul {
+		list-style: none;
+		float: left;
+		margin-right: 50px;
+	}
+
+	.footer .fo_l .fo_l_c ul li {
+		line-height: 22px;
+	}
+
+	.footer .fo_l .fo_l_c ul li a {
+		text-decoration: none;
+		color: gray;
+		font-size: 12px;
+	}
+
+	.footer .fo_l .fo_l_c ul li a:hover {
+		color: black;
+	}
+
+	.footer .fo_c {
+		width: 15%;
+		float: left;
+		padding: 30px;
+	}
+
+	.footer .fo_c .fo_c_h {
+		border-bottom: 1px solid #C0C0C0;
+		padding-bottom: 10px;
+		padding-left: 5px;
+	}
+
+	.footer .fo_c .fo_c_h h3 {
+		font-weight: normal;
+		font-size: 16px;
+		/*margin: 20px 25px;*/
+		color: gray;
+	}
+
+	.footer .fo_c .fo_c_c {
+		padding-top: 10px;
+		padding-left: 5px;
+	}
+
+	.footer .fo_c .fo_c_c ul {
+		list-style: none;
+	}
+
+	.footer .fo_c .fo_c_c ul li {
+		line-height: 22px;
+	}
+
+	.footer .fo_c .fo_c_c ul li a {
+		text-decoration: none;
+		color: gray;
+		font-size: 12px;
+	}
+
+	.footer .fo_c .fo_c_c ul li a:hover {
+		color: black;
+	}
+
+	.footer .fo_r {
+		width: 24%;
+		float: left;
+		padding: 30px;
+	}
+
+	.footer .fo_r .fo_r_h {
+		border-bottom: 1px solid #C0C0C0;
+		padding-bottom: 10px;
+		padding-left: 5px;
+	}
+
+	.footer .fo_r .fo_r_h h3 {
+		font-weight: normal;
+		font-size: 16px;
+		/*margin: 20px 25px;*/
+		color: gray;
+	}
+
+	.footer .fo_r .fo_r_c {
+		padding-top: 15px;
+	}
+	
+	.footer2 {
+		width: 1000px;
+	}
+
+	.footer2 .fo2_l {
+		float: left;
+		margin-top: 10px;
+		margin-bottom: 30px;
+	}
+
+	.footer2 .fo2_l p {
+		margin-left: 15px;		
+	}
+
+	.footer2 .fo2_l p a {
+		text-decoration: none;
+		color: gray;
+		font-size: 10px;
+	}
+
+	.footer2 .fo2_l p a:hover {
+		color: black;
+	}
+
+	.footer2 .fo2_r {
+		float: right;
+		margin-top: 10px;
+		margin-bottom: 30px;
+		margin-right: 10px;
+	}
+
+	.footer2 .fo2_r p {
+		color: gray;
+		font-size: 10px;
+	}
+
+</style>
+
+ </head>
+ <body>
+ <div class="all"> 
+
+  <div class="roof">
+	<div class="ro_logo">
+		<img src="img/1_lo.jpg" title="logo" alt="图不见了" />
+	</div>
+
+	<div class="ro_sou">
+		<form class="ro_sou_form">
+
+			<input type="text" placeholder="    SEARCH..." class="ro_sou_text"></input><input type="submit" class="ro_sou_button" value=" "></input>
+		
+		</form>
+	</div>
+  </div>
+
+  <div class="nav">
+	<ul>
+		<li>
+			<a href="#">集团介绍</a>
+		</li>
+		<li>
+			<a href="#">产品中心</a>
+		</li>
+		<li>
+			<a href="#">卧龙市场</a>
+		</li>
+		<li>
+			<a href="#">技术研发</a>
+		</li>
+		<li>
+			<a href="#">国际合作</a>
+		</li>
+		<li>
+			<a href="#">投资者关系</a>
+		</li>
+		<li>
+			<a href="#">新闻资讯</a>
+		</li>
+		<li class="spec_li">
+			<a href="#" class="spec_a">人力资源</a>
+		</li>
+	</ul>
+  </div>
+
+  <div class="banner">
+	<a href="#" target="_blank"><img src="img/1_ba.jpg" alt="图片不见了" title="广告大图"/></a>
+  </div>
+
+  <div class="content1">
+	<div class="co1_l">
+		<h3>新闻资讯</h3>
+
+		<ul>	
+			<li>
+
+				<a href="#">陈建董事长出席ATB集团召开年度销售大会</a>
+				<span class="co1_lr">2013-07-30</span>
+				
+			</li>
+			<li>
+				
+				<a href="#">中国电器工业协会分马力点击分会在卧龙召开理事长...</a>
+				<span class="co1_lr">2013-07-30</span>
+				
+			</li>
+			<li>
+				
+				<a href="#">陈建董事长访问中国驻德大使馆</a>
+				<span class="co1_lr">2013-07-30</span>	
+				
+			</li>
+			<li>
+				
+				<a href="#">企业文化是企业持续经营的关键要素</a>
+				<span class="co1_lr">2013-07-30</span>
+				
+			</li>
+			<li>
+				
+				<a href="#">陈建成监事长在ATB集团2013年销售会议上发表重要...</a>
+				<span class="co1_lr">2013-07-30</span>
+				
+			</li>
+			<li>
+				
+				<a href="#">喜迎七一&nbsp;唱响卧龙&nbsp;年轻力量激发企业持久活力&nbsp;卧龙举...</a>
+				<span class="co1_lr">2013-07-30</span>
+				
+			</li>
+		</ul>
+	</div>
+
+	<div class="co1_c">
+		<h3>卧龙介绍</h3>
+
+		<p class="co1_c1">公司成立于1984年，经过近30年的发展</p>
+
+		<p class="co1_c2">已成为电器制造，房地产开发和金融投资三业并举的综合性跨国...</p>
+	</div>
+
+	<div class="co1_r">
+		<h3>人才招聘</h3>
+		
+		<p>培养一流的人才，铸造一流的工程实现员工与企业的共同发展</p>
+
+		<a href="#"><img src="img/1_zp2.jpg" /></a>
+	</div>
+  </div>
+
+  <div class="content2">
+	<h3>卧龙市场</h3>
+
+	<div class="co2">
+		<a href="#">
+			<div class="co2_pho"><img src="img/1_sc1.jpg" width="210px" /></div>
+			<p class="co2_p">交通轨道：由于主要采用电气牵引，而且轮轨摩擦阻力较小，与公共...</p>
+		</a>
+	</div>
+
+	<div class="co2">
+		<a href="#">
+			<div class="co2_pho"><img src="img/1_sc2.jpg" width="210px"/></div>
+			<p class="co2_p">节能环保：由于不断上涨的能源消耗和我们的专业知识，维护可持续...</p>
+		</a>
+	</div>
+
+	<div class="co2">
+		<a href="#">
+			<div class="co2_pho"><img src="img/1_sc3.jpg" width="210px"/></div>
+			<p class="co2_p">船空与船舰：如果你是在公海行驶，你需要确保你的船只的电力系统...</p>
+		</a>
+	</div>
+
+	<div class="co2">
+		<a href="#">
+			<div class="co2_pho"><img src="img/1_sc4.jpg" width="210px"/></div>
+			<p class="co2_p">石油、天然气及采矿：在市场中的安全性，可靠性，效率和最短的停机...</p>
+		</a>
+	</div>
+  </div>
+
+  <div class="footer">
+	<div class="fo_l">
+		<div class="fo_l_h">
+			<h3>产品中心</h3>
+		</div>
+
+		<div class="fo_l_c">
+			<ul>
+				<li><a href="#">>&nbsp;汽车电机</a></li>
+				<li><a href="#">>&nbsp;日用电机</a></li>
+				<li><a href="#">>&nbsp;特种电机</a></li>
+				<li><a href="#">>&nbsp;大功率电机</a></li>
+				<li><a href="#">>&nbsp;电工设备</a></li>
+			</ul>
+
+			<ul>
+				<li><a href="#">>&nbsp;工业驱动和自动化</a></li>
+				<li><a href="#">>&nbsp;高压变频和系统集成</a></li>
+				<li><a href="#">>&nbsp;混泥土搅拌机</a></li>
+				<li><a href="#">>&nbsp;电动车辆</a></li>
+			</ul>
+
+			<ul>
+				<li><a href="#">>&nbsp;电池电源</a></li>
+				<li><a href="#">>&nbsp;输变电设备</a></li>
+				<li><a href="#">>&nbsp;楼盘信息</a></li>
+				<li><a href="#">>&nbsp;金融产品</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="fo_c">
+		<div class="fo_c_h">
+			<h3>科技研发</h3>
+		</div>
+		
+		<div class="fo_c_c">
+			<ul>
+				<li><a href="#">>&nbsp;科技力量</a></li>
+				<li><a href="#">>&nbsp;现今设备</a></li>
+				<li><a href="#">>&nbsp;研发创新</a></li>
+				<li><a href="#">>&nbsp;工艺流程</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="fo_r">
+		<div class="fo_r_h">
+			<h3>营销网络</h3>
+		</div>
+
+		<div class="fo_r_c">
+			<a href="#"><img src="img/1_web.jpg"></a>
+		</div>
+	</div>
+  </div> 	
+	
+  <div class="footer2">
+	<div class="fo2_l">
+		<p>
+			<a href="#">网站地图&nbsp;|</a>
+			<a href="#">联系我们&nbsp;|</a>
+			<a href="#">关注卧龙&nbsp;|</a>
+			<a href="#">采购系统入口</a>
+		</p>
+	</div>
+
+	<div class="fo2_r">
+		<p>
+			COPYRIGHT&copy;2013卧龙控股集团 版权所有 浙ICP备0605901号 技术支持：博彩互动&nbsp;分享到：
+			<a href="#"><img src="img/1_fenxiang.jpg"></a>
+		</p>
+	</div>
+  </div>
+
+</div>
+ </body>
+</html>

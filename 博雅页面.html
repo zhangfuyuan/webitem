@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>必做2</title>
+
+<style>
+	* {
+		margin:0 ;
+		padding: 0;
+		font-family: "微软雅黑";
+	}
+
+	.all {
+		width: 1200px;
+		margin: 0 auto;
+	}
+	
+	.nav {
+		background-color: #191d3a;
+		width: 1200px;
+		height: 55px;
+	}
+	
+	.nav .na_logo {
+		float: left;
+		height: 55px;
+	}
+
+	.na_dao {
+		float: left;
+	}
+
+	.na_dao ul {
+		list-style: none;
+	}
+
+	.na_dao ul li {
+		float: left;		
+		width: 120px;
+		height: 100%;
+		line-height: 55px;
+		text-align: center;
+	}
+
+	.na_dao ul li a {
+		display: block;
+		border-right: 1px solid gray;
+		border-left: 1px solid gray;
+		width: 120px; 
+		height: 100%;
+		color: #818496;
+		text-decoration: none;
+		background-color: #191d3a;
+	}
+
+	.na_dao ul li a:hover {
+		color: #e2e4ed;
+		background-color: #252947;
+	}
+
+	.na_jia {
+		float: left;
+		margin-top: 7px; 
+		margin-left: 20px; 
+	}
+	
+	.banner {
+		float: left;
+	}
+
+	.content {
+		float: left;
+		width: 1200px;
+		
+	}
+
+	.co1 {
+		float: left;
+		margin: 30px 25px;
+		text-align: center;
+	}
+
+	.spec1 {
+		margin-left: 120px;
+	}
+	.co1 h3 {
+		font-size: 15px;
+		line-height: 30px;
+	}
+
+	.co1 a {
+		text-decoration: none;
+	}
+
+	.co1 p {
+		color: #38b774;
+		font-size: 12px;
+		line-height: 15px;
+	}
+
+	.co2  {
+		width: 1200px;
+		background-image: url(img/indexmainbg.jpg);
+		background-repeat: no-repeat;
+		background-position: bottom;
+		background-size: 100%;
+	}
+
+	.co2_l {
+		float: left;
+		width: 500px;
+		height: 310px;
+		background-image: url(img/bynewsbg.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+		margin-left: 100px;
+		margin-top: 20px;
+	} 
+
+	.co2_l_h {
+		padding: 40px 220px;
+	}
+
+	.co2_l ul {
+		list-style: none;
+		padding: 10px 20px;
+	}
+
+	.co2_l ul li {
+		width: 450px;
+		border-bottom: 1px solid #DCDCDC;
+		padding-bottom: 5px;
+		
+	}
+
+	.co2_l ul li span {
+		line-height: 40px;
+		color: gray;
+		font-size: 12px;
+		margin-right: 20px;
+	}
+
+	.co2_l ul li a {
+		line-height: 40px;
+		font-size: 12px;
+		color: black;
+		text-decoration: none;
+	}
+
+	.co2_l ul li a:hover {
+		color: red;
+	}
+	
+	.spec2 {
+		clear: both;
+	}
+
+	.co2_r {
+		width: 500px;
+		height: 310px;
+		float: left;
+		background-image: url(img/byhrbg3.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+		margin-top: 20px;
+	}
+
+	.co2_r_h {
+		margin-left: 80px; 
+		margin-top: 40px; 
+		width: 200px;
+	}
+
+	.co2_r_h h3 {
+		float: left;
+		color: white;
+	}
+
+	.co2_r_h h4 {
+		float: left;
+		color: white;
+		font-weight: normal;
+		font-size: 10px;
+	}
+
+	.co2_r_h .co2_r_h_pho {
+		float: right;
+		margin-right: 35px;
+	}
+
+	.co2_r_p {
+		float: left;
+		padding-top: 30px;
+		padding-left: 20px;
+	}
+
+	.co2_r_ph {
+		font-size: 15px;
+		color: white;
+		font-weight: bold;
+	}
+
+	.co2_r_pp {
+		font-size: 15px;
+		color: white;
+		height: 30px;
+		width: 300px;
+		margin-top: 10px;
+		border-bottom: 1px solid white;
+	}
+
+	.footer {
+		width:1200px;
+		float: left;
+		margin-top: 40px;
+	}
+
+	.fo_float {
+		z-index: 1;
+		position: fixed;
+		bottom: 75px;
+		right: 150px;
+	}
+</style>
+
+ </head>
+ <body>
+
+ <div class="all">
+	<div class="nav">
+		<div class="na_logo">
+			<img src="img/2_logo.jpg" alt="logo" height="55px"/>
+		</div>
+
+		<div class="na_dao">
+			<ul>
+				<li>
+					<a href="#" name="top">首页</a>
+				</li>
+				<li>
+					<a href="#">博雅游戏</a>
+				</li>
+				<li>
+					<a href="#">博雅新闻</a>
+				</li>
+				<li>
+					<a href="#">关于我们</a>
+				</li>
+				<li>
+					<a href="#">客服中心</a>
+				</li>
+				<li>
+					<a href="#">投资者关系</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="na_jia">
+			<a href="#"><img src="img/2_jia.jpg" alt="加入我们"/></a>
+		</div>
+	</div>
+
+	<div class="banner">
+		<a href="#"><img src="img/banner.jpg" alt="banner" width="1200px" /></a>
+	</div>
+
+	<div class="content">
+		<div class="co1 spec1">
+			<a href="#"><img src="img/bpt.jpg" width="200px" /></a>
+
+			<h3>BPT宣传片</h3>
+
+			<a href="#"><p class="dianbo">点击播放</p></a>
+		</div>
+
+		<div class="co1">
+			<a href="#"><img src="img/video.jpg" width="200px" /></a>
+
+			<h3>博雅互动宣传视频</h3>
+
+			<a href="#"><p class="dianbo">点击播放</p></a>
+		</div>
+
+		<div class="co1">
+			<a href="#"><img src="img/gamepic3.jpg" width="200px" /></a>
+
+			<h3>斗地主</h3>
+
+			<a href="#"><p class="dianbo">点击播放</p></a>
+		</div>
+
+		<div class="co1">
+			<a href="#"><img src="img/gamepic1.jpg" width="200px" /></a>
+
+			<h3>德州扑克</h3>
+
+			<a href="#"><p class="dianbo">点击播放</p></a>
+		</div>
+
+		<div class="co_fenge"><center>
+			<img src="img/2_fenge.jpg" width="1000px"/></center>
+		</div>
+		
+		<div class="co2">
+			<div class="co2_l">
+				<div class="co2_l_h">
+					<a href="#"><img src="img/2_more1.jpg"></a>
+				</div>
+
+				<ul>
+					<li>
+						<span> 09/28 </span>
+						<a href="#"> 2015博雅国际扑克大赛（BPT）在澳门落幕 </a>
+						<div class="spec2"> </div>
+					</li>
+
+					<li>
+						<span> 08/26 </span>
+						<a href="#"> 2015 BPT博雅国际扑克大赛重磅来袭 </a>
+						<div class="spec2"> </div>
+					</li>
+
+					<li>
+						<span> 08/01 </span>
+						<a href="#"> 博雅互动与阿里游戏联手启动“淘宝杯首届电视棋牌大赛” </a>
+						<div class="spec2"> </div>
+					</li>
+
+					<li>
+						<span> 07/21 </span>
+						<a href="#"> 湖南省省长杜家豪一行参观博雅互动 </a>
+						<div class="spec2"> </div>
+					</li>
+
+				</ul>
+			</div>
+		
+
+			<div class="co2_r">
+				<div class="co2_r_h">
+					<h3>专场招聘</h3>
+					<a href="#"><img src="img/2_more2.jpg" class="co2_r_h_pho" /></a>
+					<h4>BOYAA JOBS</h4>
+					
+				</div>
+
+				<div class="co2_r_p spec2">
+					<p class="co2_r_ph">专场招聘岗位：</p>
+					<p class="co2_r_pp">PHP开发工程师</p>
+					<p class="co2_r_pp">C++开发工程师</p>
+					<p class="co2_r_pp">WEB前端开发工程师</p>
+					<p class="co2_r_pp">大数据开发工程师</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<img src="img/2_footer.jpg" />
+	</div>
+
+	<div class="fo_float spec2">
+		<a href="#top"><img src="img/2_float.jpg" /></a>
+	</div>
+ </div>
+
+ </body>
+</html>
