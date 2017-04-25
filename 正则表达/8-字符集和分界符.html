@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符集和分界符</title>
+</head>
+<body>
+<script>
+    /* 1、字符集 */
+    var reg = /[A-Z]/;      //匹配大写字母
+    console.log(reg.test('adasdsad'));
+    console.log(reg.test('adasdsadSGSDGDG'));
+    console.log('---------------------------------------------------------------------- 以上：匹配大写字母');
+
+    var reg0 = /[a-z]/;     //匹配小写字母
+    console.log(reg0.test('SAFSDFSD'));
+    console.log(reg0.test('FGHFGHNFas'));
+    console.log('---------------------------------------------------------------------- 以上：匹配小写字母');
+
+    var reg1 = /[0-9]/;     //匹配数字
+    console.log(reg1.test('asDCFS'));
+    console.log(reg1.test('asDCFS224'));
+    console.log('-------------------------------------------------------------------------- 以上：匹配数字');
+
+    var reg2 = /[i-y]/;     //匹配i到y区间内的小写字母
+    console.log(reg2.test('12abABz'));
+    console.log(reg2.test('12abABx'));
+    console.log('----------------------------------------------------------- 以上：匹配i到y区间内的小写字母');
+
+    var reg22 = /[a-zA-Z0-9]/;     //匹配组合字符
+    console.log(reg22.test('*$%^#%$'));
+    console.log(reg22.test('*$%^#%$a'));
+    console.log('---------------------------------------------------------------------- 以上：匹配组合字符');
+    /*
+     * 它是由一一对应的字符组成的集合，通过{]包裹住
+     * 范围类
+     * [A-Z] ：匹配大写字母
+     * [a-z] ：匹配小写字母
+     * [0-9] ：匹配数字
+     * [i-y] ：匹配i到y区间内的小写字母
+     * */
+
+
+    /* 2、分界符 */
+    var reg3 = /^xiaoming/;     //^以什么开头
+    console.log(reg3.test('asd1xiaoming5'));
+    console.log(reg3.test('xiaoming15sds'));
+    console.log('----------------------------------------------------------------------- 以上：^以什么开头');
+
+    var reg4 = /xiaoming$/;     //$以什么结尾
+    console.log(reg4.test('asd1xiaoming5'));
+    console.log(reg4.test('asd1xiaoming'));
+    console.log('----------------------------------------------------------------------- 以上：$以什么结尾');
+
+    var reg5 = /[^xiaoming]/;     //匹配不在[]内字符串
+    console.log(reg5.test('xiaoxiaomxiaomixiaoming'));
+    console.log(reg5.test('xiaoxiaomxiaomixiaomingX'));
+    console.log('---------------------------------------------------------------- 以上：匹配不在[]内字符串');
+    /*
+    *   [...] ：表示匹配到[]里面的字符串，则返回true；
+    *   [^...] ：表示匹配到非[]里面的字符串，则返回true；
+    * */
+
+</script>
+</body>
+</html>

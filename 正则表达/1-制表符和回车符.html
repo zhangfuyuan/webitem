@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>制表符和回车符</title>
+</head>
+<body>
+<script>
+    var str = 'hellow\nxiaoming';
+    var reg = /\n/;         //回车符 == 回车键（换行功能）
+
+    var str0 = 'hellow\txiaoming';
+    var reg0 = /\t/;        //制表符 == Tab键（缩进功能）
+
+    console.log(str);
+    console.log(reg.test(str));
+
+    console.log(str0);
+    console.log(reg0.test(str0));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>replace</title>
+</head>
+<body>
+<script>
+    var str = 'xiaohong正在看《人民的名义》';
+    console.log(str.replace(/人民的名义/,'新闻联播'));
+    console.log(str.replace('人民的名义','快乐大本营'));
+    console.log(str.replace(/人民的名义/,/天天向上/));       //第二参数不能用正则表达式
+    console.log(str.replace(/人民的名义/,function () {
+        return '前端学习手册';
+    }));
+    /*
+    *“replace”：替换字符串方法
+    * 第一个参数：匹配的字符串，可以是字符串也可以是正则表达式；
+    * 第二个参数：替换的字符串，可以是字符串也可以是有返回值的函数，但用正则表达式时前后会多出“/”；
+    * */
+
+    var result = 'abcdefig'.replace(/ab(cd)e(fi)g/,function(match,$1,$2){
+        return 'ab' + $1 +'----'+ $2 + '---' + $1;      //重写函数
+    });
+    console.log(result);         //abcd----fi---cd
+    /*
+     * 此时的$ 符号代表 配平的单元 单元就是一个（）里面匹配的东西
+     * $1 就是代表匹配到第一个单元
+     * $2 就是第二个
+     * ...
+     * 最多就到$9;
+     */
+
+</script>
+</body>
+</html>

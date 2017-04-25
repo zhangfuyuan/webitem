@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<script>
+    var str = 'hello xiaoming';
+
+    var reg = /hello/;
+    var reg0 = /he/;
+    var reg1 = /xiaoming/;
+    var reg2 = /o /;
+    var reg3 = / o/;
+
+    console.log(reg.test(str));
+    console.log(reg0.test(str));
+    console.log(reg1.test(str));
+    console.log(reg2.test(str));
+    console.log(reg3.test(str));
+
+    var demo = prompt('不准输入空格');
+    alert(!(/\s/.test(demo)));
+    /*
+    *“test()”是正则对象的方法，其他没有；
+    *“test()”表示该字符串是否匹配正则对象的规则，
+    * 匹配到返回true
+    * 匹配不到返回false
+    * */
+</script>
+</body>
+</html>

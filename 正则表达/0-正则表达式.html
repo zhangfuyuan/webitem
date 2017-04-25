@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+</head>
+<body>
+<script>
+    /*
+    * 正则表达式 （regular expression） 是一个描述字符模式的对象。
+    * javascript中的正则表达式用RegExp对象表示，可以使用 new RegExp();
+    * 对象更多的是通过一种特殊的直接量语法来创建
+    * */
+    var pattern = /d$/;                      //字面量定义式创建
+    console.log(typeof pattern);
+    console.log(pattern.constructor);
+
+    var pattern2 = new RegExp('w$');        //面向对象式创建
+    console.log(typeof pattern2);
+    console.log(pattern2.constructor);
+
+</script>
+</body>
+</html>

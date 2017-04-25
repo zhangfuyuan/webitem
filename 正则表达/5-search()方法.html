@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+</head>
+<body>
+<script>
+
+    var str = 'adcde';
+    console.log(str.indexOf('cd'));
+    console.log('==============');
+    console.log(str.search('cd'));
+    console.log('==============');
+    console.log(str.search(/cd/));      //正则表达式，不加引号
+    console.log('==============');
+    console.log(str.search(/ff/));
+    /**
+     * “search” 用来寻找字符串或者其中的位置，若它的参数是一个正则表达式，则返回一个与之匹配的字符串的起始位置，找不到则返回-1；
+     * “indexOf”用来返回查找的字符串在原字符串中首次出现的位置；
+     *
+     */
+
+
+</script>
+</body>
+</html>

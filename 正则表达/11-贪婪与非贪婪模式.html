@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>非贪与贪</title>
+</head>
+<body>
+<script>
+    /* 1、贪婪模式【“+”：表示匹配到结束为止】 */
+    var reg = /a+/;
+    console.log(reg.exec('aaaabbab')[0]);
+
+    /* 2、非贪婪模式【“+?”：表示只要遇到匹配到一个就停止】*/
+    var reg0 = /a+?/;
+    console.log(reg0.exec('aaaabbab')[0]);
+    console.log(reg0.exec('vvvvvvc'));
+
+</script>
+</body>
+</html>

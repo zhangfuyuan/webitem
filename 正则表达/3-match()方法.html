@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>match</title>
+</head>
+<body>
+<script>
+    var str = 'abbcccddddffbbsscccbbebccbbc';
+    console.log(str.match(/b/));
+    console.log(str.match(/cc/));
+    console.log(str.match(/bb/g));
+
+    var str2 = 'xiaobai晚上回家看小电影，小电影很好看！';
+    console.log(str2.match(/小电影/));
+    console.log(str2.match(/小电影/g));
+    /*
+    *“match”：在字符串中寻找匹配的字符串
+    * 参数是匹配的字符串 或者 匹配规则（即正则）
+    *“g”：表示全局匹配
+    * 当不加g时，第一个值：匹配的规则或字符文本【属性：字符串】
+    *            第二个值：返回匹配字符串的起始位置【属性：index】
+    *            第三个值：返回匹配的全部文本（原字符串）【属性：input】
+    * */
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修饰符</title>
+</head>
+<body>
+<script>
+    /*
+    * “g”：表示全局匹配
+    * */
+    var str = 'xiaomingdashdifadkxiaoming';
+    console.log(str.match(/xiaoming/));
+    console.log(str.match(/xiaoming/g));    //全局若有多个，则返回多个数组
+    console.log('-------------------------------------------------------------------- 以上：全局匹配修饰符');
+
+    /*
+    * “i”：表示忽略大小写
+    * */
+    var str0 = 'hellow xiaoming';
+    console.log(str.match(/XIAOMING/));     //默认区分大小写，匹配不到则返回null
+    console.log(str.match(/XIAOMING/i));
+    console.log('------------------------------------------------------------------ 以上：忽略大小写修饰符');
+
+</script>
+</body>
+</html>

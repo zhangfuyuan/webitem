@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预定义类</title>
+</head>
+<body>
+<script>
+    /*
+    *   “\d”== [0-9] ：表示数字字符
+    * */
+    var reg = /\d/;
+    console.log(reg.test('adasd'));
+    console.log(reg.test('ada45sd'));
+    console.log('-------------------------------------------------------------------------- 以上：数字字符');
+
+    /*
+     *   “\D”== [^0-9] ：表示非数字字符
+     * */
+    var reg0 = /\D/;
+    console.log(reg0.test('16516'));
+    console.log(reg0.test('451651a'));
+    console.log('------------------------------------------------------------------------ 以上：非数字字符');
+
+    /*
+     *   “\s”== 空格 ：空白字符
+     * */
+    var reg1 = /\s/;
+    console.log(reg1.test('asd'));
+    console.log(reg1.test('asd asd'));
+    console.log('-------------------------------------------------------------------------- 以上：空白字符');
+
+    /*
+     *   “\S”== 除了空格之外的一切字符 ：非空白字符
+     * */
+    var reg2 = /\S/;
+    console.log(reg2.test(' '));
+    console.log(reg2.test(''));
+    console.log(reg2.test('aafdsf'));
+    console.log(reg2.test('as dd'));
+    console.log('------------------------------------------------------------------------ 以上：非空白字符');
+
+    /*
+     *   “\w”== [a-zA-Z0-9] ：匹配所有大小写字母和数字
+     * */
+    var reg3 = /\w/;
+    console.log(reg3.test('$%^$#$^%'));
+    console.log(reg3.test('$%^$#$^%A'));
+    console.log(reg3.test('$%^$#$^%a'));
+    console.log(reg3.test('$%^$#$^%8'));
+    console.log(reg3.test('$%^$#$^%aA8'));
+    console.log('----------------------------------------------------------- 以上：匹配所有大小写字母和数字');
+
+    /*
+     *   “\W”== [^a-zA-Z0-9] ：匹配所有非大小写字母和数字的字符
+     * */
+    var reg4 = /\W/;
+    console.log(reg4.test('aas'));
+    console.log(reg4.test('FASF'));
+    console.log(reg4.test('54151'));
+    console.log(reg4.test('adFDA445@@'));
+    console.log(reg4.test('你爸爸'));
+    console.log('--------------------------------------------------- 以上：匹配所有非大小写字母和数字的字符');
+
+
+</script>
+</body>
+</html>

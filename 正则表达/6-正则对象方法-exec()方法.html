@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exec</title>
+</head>
+<body>
+<script>
+    var str = 'aaajjjjabckkkabcllllabc';
+
+    var reg = /abc/;
+    var reg0 = /abc/g;                  //以上两种为字面量定义创建正则对象
+    var reg1 = new RegExp('abc','g'); //这种为实例化方式创建正则对象
+    var reg2 = new RegExp('cba','g');
+
+    console.log(reg.exec(str));
+    console.log(reg0.exec(str));
+    console.log(reg1.exec(str));
+    console.log(reg1.lastIndex);        // lastIndex 每次调用后这个都会变化
+    console.log(reg1.exec(str));
+    console.log(reg1.lastIndex);        // lastIndex 每次调用后这个都会变化
+    console.log(reg1.exec(str));
+    console.log(reg1.lastIndex);        // lastIndex 每次调用后这个都会变化
+    console.log(reg2.exec(str));        //null
+    /*
+    *“exec()”是正则对象的方法，其他没有；
+    *“exec()”表示如果找到匹配的文本，则返回一个结果数组，若匹配不到则返回null；
+    * “lastIndex”属性常与“exec()”一起使用
+    * */
+</script>
+</body>
+</html>

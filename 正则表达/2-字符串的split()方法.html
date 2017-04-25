@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>split</title>
+</head>
+<body>
+<script>
+    var str = 'a  b      c';        //不规则就应该用正则表达式
+    console.log(str.split(''));     //没空格
+    console.log(str.split(' '));    //一个空格
+    console.log(str.split('  '));   //两个空格
+    console.log(str.split(/\s+/));  //正则表达式，不加引号
+    /*
+        “split” ：用来分割字符串为数组
+        “\s”    ：表示空白字符
+        “+”     ：表示出现一次或多次（至少要出现一次）
+    */
+
+    var str2 = 'abbacccaaddddaaasgdhtrutykghfgn';
+    console.log(str2.split(/\a/));     //“\a”表示以a为分割符
+    console.log(str2.split(/\a+/));     //“\a”表示以a为分割符
+
+    /* 总结：作为分隔符，若出现在首位，则留一位显空格；若非首位，不留位不显示！ */
+
+</script>
+</body>
+</html>

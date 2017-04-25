@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>量词</title>
+</head>
+<body>
+<script>
+    /*
+    *   “?”：单次重复出现零次或一次
+    * */
+    var reg = /cd?/;
+    //非贪婪模式下，匹配到一个就停止，所以不可能匹配到重复多次出现的情况，故所有情况均为true
+    console.log(reg.exec('4524'));     // 没有则为null
+    console.log(reg.exec('45c24'));        // 第三个位置就已经匹配到【重复一次】，所以就停止匹配了
+    console.log(reg.exec('4cd5cd2cd4'));      // 第二个位置就已经匹配到【重复一次】，所以就停止匹配了
+    console.log(reg.exec('cdcdcdcdcdcdcdcdcdcdcdcdcd'));        // 第一个位置就已经匹配到【重复一次】，所以就停止匹配了
+    console.log(reg.lastIndex);
+    console.log(reg.exec('cdcdcdcdcdcdcdcdcdcdcdcdcd'));
+    console.log(reg.lastIndex);        //由此可以证明停止匹配了
+    console.log(reg.test('4524'));     // null ==》 false
+    console.log(reg.test('45cd24'));        // 【重复一次】 ==》 true
+    console.log(reg.test('4cd5cd2cd4'));      // 【重复一次】 ==》 true
+    console.log(reg.test('cdcdcdcdcdcdcdcdcdcdcdcdcd'));        // 【重复一次】 ==》 true
+    console.log('-------------------------------------------------------------------------------- 以上：?');
+
+    /*
+     *   “+”：单次重复出现一次或多次 （至少一次）
+     * */
+    //贪婪模式
+    var reg0 = /\s+/;
+    console.log(reg0.test('asdas'));        // （单次重复）零次 ==》 false
+    console.log(reg0.test('asd as'));      // （单次重复）一次 ==》 true
+    console.log(reg0.test('a s d as'));   // （多次重复）一次 ==》 true
+    console.log(reg0.test('a    sdsdf'));   // （单次重复）多次 ==》 false
+    console.log('-------------------------------------------------------------------------------- 以上：+');
+
+    /*
+    *  “*”：重复重现零次、一次和多次（即所有状态）
+    * */
+    var reg1 = /\s*/;
+    console.log(reg1.test('asdasd'));
+    console.log('-------------------------------------------------------------------------------- 以上：*');
+
+    /*
+    *  自定义重复次数
+    *  “{n}”：重复出现n次；
+    *  “{n,m}”：重复出现n到m次；
+    *  “{n,}”：至少重复出现n次
+    * */
+    var reg2 = /\s{2}/;
+    console.log(reg2.test('a sdasd'));
+    console.log(reg2.test('a  sdasd'));
+    console.log('------------------------------------------------------------------------------ 以上：{n}');
+
+    var reg3 = /\s{2,4}/;
+    console.log(reg3.test('a sd as d'));
+    console.log(reg3.test('a   sdasd'));
+    console.log('---------------------------------------------------------------------------- 以上：{n,m}');
+
+    var reg4 = /\s{2,}/;
+    console.log(reg4.test('a sda sd'));
+    console.log(reg4.test('a  sdasd'));
+    console.log('----------------------------------------------------------------------------- 以上：{n,}');
+
+
+</script>
+</body>
+</html>

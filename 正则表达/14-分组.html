@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分组</title>
+</head>
+<body>
+<script>
+    /*
+    * “()”：组合，将括号内的字符组合为一个单元
+    * “\n”：表示匹配到第一个单元，并将其插入此位置（n为1-9的整数）
+    * */
+    var reg = /ab(cd)ef(hi)\2/;
+    console.log(reg.test('abcdefhi'));
+    console.log(reg.test('abcdefhihi'));
+    console.log('==============================');
+
+    var reg0 = /ab(cd)ef(hi)\1jk(l)\3\3/;
+    console.log(reg0.test('abcdefhijkl'));
+    console.log(reg0.test('abcdefhicdjklll'));
+    console.log('==============================');
+
+    var result = 'abcdefghi'.replace(/ab(cd)e(fg)hi/, function (match, $1, $2) {
+        return 'ab' + $1 + '----' + $2 + '---' + $1;
+    });
+    console.log(result);    //abcd----fg---cd
+    console.log('==============================');
+
+    var reg1 = /aa(mobile)bb(email)cc\1dd\2/;
+    console.log(reg1.test('aamobilebbemailccmobileddemail'));
+
+</script>
+</body>
+</html>
