@@ -7,8 +7,10 @@
     window.Slider = function Slider(argsJSON) {     //构造一个window下的Slider属性函数
         if(!argsJSON.ID){
             throw new Error('对不起，传入的参数中必须有ID');     //抛出错误
+            return;
         }
         this.carousel = document.getElementById(argsJSON.ID);
+        this._init();
         // console.log(this.carousel);     //1、打印出id为“你为carousel属性赋值的ID名”的DOM节点（未加入插件并实例化时，此值为null）
         // console.log('===================== 以上：打印出id为“carousel”的DOM节点');
         // // * 代表DOM所有的tagName
@@ -31,7 +33,23 @@
         this.tween = function (t,b,c,d) {       //实现的是切换效果，这里的所有时间只跟切换效果时图的位置有关
             return c * t / d + b;       //返回的是：这一帧这张图所在的位置！
         };
-    }  ;  
+    }  ;
+
+    Slider.prototype._init = function () {
+        this.carousel.innerHTML = ["<div class='btns'>",
+            "<a href='javascript:;' class='leftBtn' id='leftBtn'>&lt;</a>",
+            "<a href='javascript:;' class='rightBtn' id='rightBtn'>&gt;</a>",
+            "</div>",
+            "<div class='imageList'>",
+            "<ul>",
+            "<li class='first'><a href='#'><img src='images/0.jpg' alt='' /></a></li>",
+            "<li><a href='#'><img src='images/1.jpg' alt='' /></a></li>",
+            "<li><a href='#'><img src='images/2.jpg' alt='' /></a></li>",
+            "<li><a href='#'><img src='images/3.jpg' alt='' /></a></li>",
+            "</ul>",
+            "</div>"].join('');     //html文档放入数组并转成字符串！
+        // console.log(this.carousel);
+    };
     
     //获取DOM
     //在原型上面加 _ 下划线是约定俗成的仅供内部调用
