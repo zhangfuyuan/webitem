@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            border: none;
+        }
+        .carousel {
+            width: 600px;
+            height: 300px;
+            margin: 100px auto 0;
+            border: 1px solid gray;
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel .imageList ul {
+            list-style: none;
+            position: relative;
+        }
+        .carousel .imageList ul li {
+            position: absolute;
+            top: 0;
+            left: 600px;        /*第2、3、4张统一在第二位置上！*/
+            width: 600px;
+            height: 300px;
+        }
+        .carousel img {
+            width: 600px;
+            height: 300px;
+        }
+        .carousel .imageList ul li.first {
+            left: 0;
+        }
+        .btns a {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 50%;
+            margin-top: -20px;
+            background-color: black;
+            z-index: 999;
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            line-height: 40px;
+            opacity: .7;
+        }
+        .btns a.leftBtn {
+            left: 10px;
+        }
+        .btns a.rightBtn {
+            right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="carousel" id="carousel">
+        <div class="btns">
+            <a href="javascript:;" class="leftBtn" id="leftBtn">&lt;</a>
+            <a href="javascript:;" class="rightBtn" id="rightBtn">&gt;</a>
+        </div>
+
+        <div class="imageList">
+            <ul>
+                <li class="first"><a href="#"><img src="images/0.jpg" alt="" /></a></li>
+                <li><a href="#"><img src="images/1.jpg" alt="" /></a></li>
+                <li><a href="#"><img src="images/2.jpg" alt="" /></a></li>
+                <li><a href="#"><img src="images/3.jpg" alt="" /></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./slider.js"> </script>   <!-- 放入自己写插件 -->
+
+    <script>
+        var slider = new Slider({
+            'ID' : 'carousel',
+            'autoplayinterval' : 2000,
+            'with' : 600
+        });
+
+    </script>
+
+</body>
+</html>

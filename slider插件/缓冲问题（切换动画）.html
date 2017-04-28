@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>缓冲</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 第一个参数是 t 表示当前的帧编号
+    // 第二个参数是 b 表示起始位置
+    // 第三个参数是 c 表示变化量
+    // 第四个参数是 d 表示总帧数
+    //
+    // 我们的盒子的初始位置是100，想让盒子在3000毫秒的时候，
+    // 移动到700 间隔时间20毫秒，总帧数是150帧
+
+
+    function linear(t,b,c,d){
+        return c * t / d + b;
+    }
+    var timer = setInterval(function () {
+        var i = 1;
+        console.log(linear(i, 100, 600, 150));
+        i++;
+    },1000);
+
+</script>
+</html>
