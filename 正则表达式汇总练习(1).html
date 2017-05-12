@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式汇总练习</title>
+</head>
+<body>
+</body>
+<script>
+
+    /*  1、定义和使用 */
+    //  1.1: 定义
+    var patt1 = new RegExp('hello');
+    var patt2 = /world/;
+    //  1.2:    test()方法检索字符串中的指定值。返回值是 true 或 false。
+    console.log('test(): /my/.test("this is my code ...") -- ' + /my/.test("this is my code ..."));
+    //  1.3:    exec()方法检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null。
+    console.log('exec(): /hello/.exec("oh hello world") -- ' + /hello/.exec("oh hello world"));
+
+    /*  2、正则表达式类型 */
+    //  2.1:    i不区分大小写
+    console.log('i: "Visit Hunger".match(/hunger/i) -- ' + "Visit Hunger".match(/hunger/i));
+    //  2.2:    g全局匹配
+    console.log('g: "hello hunger valley! I am hunger".match(/hunger/g) -- ' + "hello hunger valley! I am hunger".match(/hunger/g));
+    //  2.3:    gi不区分大小写，全局匹配【*】
+    console.log('gi: hello Hunger valley! I am hunger".match(/hunger/gi) -- ' + "hello Hunger valley! I am hunger".match(/hunger/gi));
+
+    /*  3、字符串正则 */
+    //  3.1:    search()字符串查找【*】
+    console.log('search(): "Visit W3School!".search(/w3school/) -- ' + "Visit W3School!".search(/w3school/));
+    console.log('search(): "Visit W3School!".search(/w3school/i) -- ' + "Visit W3School!".search(/w3school/i));
+    //  3.2:    match()字符串匹配
+    console.log('match(): "1 plus 2 equal 33".match(/\\d+/) -- ' + "1 plus 2 equal 33".match(/\d+/));
+    console.log('match(): "1 plus 2 equal 33".match(/\\d+/g) -- ' + "1 plus 2 equal 33".match(/\d+/g));
+    //  3.3:    replace()字符串替换
+    console.log('replace(): "Hello JI! oh I am hunger".replace(/Hunger/, "valley") -- ' + "Hello JI! oh I am hunger".replace(/Hunger/, "valley"));
+    console.log('replace(): "Hello JI! oh I am hunger".replace(/Hunger/ig, "valley") -- ' + "Hello JI! oh I am hunger".replace(/Hunger/ig, "valley"));
+    //  3.4:    split()字符串分割
+    console.log('split(): "Hello Hunger   , oh I am Hunger".split("") -- ' + "Hello Hunger   , oh I am Hunger".split(""));
+    console.log('split(): "Hello Hunger   , oh I am Hunger".split(/\\s+/) -- ' + "Hello Hunger   , oh I am Hunger".split(/\s+/));
+
+    /*  4、正则写法 */
+    //  4.1:    [abc] 查找方括号之间的任何字符。
+    console.log('[abc]: "Is this all there is?".match(/[a-h]/g) -- ' + "Is this all there is?".match(/[a-h]/g));
+    //  4.2:    [^abc] 查找任何不在方括号之间的字符。【*】
+    console.log('[^abc]: "hello jikexueyuan!".match(/[^jike]/g) -- ' + "hello jikexueyuan!".match(/[^jike]/g));
+    //  4.3:    [0-9] 查找任何从 0 至 9 的数字。
+    console.log('[0-9]: "hello 12 mouth 2017 year".match(/[0-9]/g) -- ' + "hello 12 mouth 2017 year".match(/[0-9]/g));
+    //  4.4:    [a-z] 查找任何从小写 a 到小写 z 的字符。
+    console.log('[a-z]: "Hello World!".match(/[a-z]/g) -- ' + "Hello World!".match(/[a-z]/g));
+    //  4.5:    [A-Z] 查找任何从大写 A 到大写 Z 的字符。
+    console.log('[A-Z]: "Hello World!".match(/[A-Z]/g) -- ' + "Hello World!".match(/[A-Z]/g));
+    //  4.6；   [A-z] 查找任何从大写 A 到小写 z 的字符。【*】
+    console.log('[A-z]: "Hello World!".match(/[A-z]/g) -- ' + "Hello World!".match(/[A-z]/g));
+    //  4.7:    [adgk] 查找给定集合内的任何字符。
+    console.log('[adgk]: "hello dark!".match(/[adgk]/g) -- ' + "hello dark".match(/[adgk]/g));
+    //  4.8:    [^adgk] 查找给定集合外的任何字符。【*】
+    console.log('[^adgk]: "hello dark!".match(/[^adgk]/g) -- ' + "hello dark".match(/[^adgk]/g));
+    //  4.9:    red|blue|green 查找任何指定的选项。【*】
+    console.log('red|blue|green: "hello hunger! How are you?".match(/hello|you/g) -- ' + "hello hunger! How are you?".match(/hello|you/g));
+    //  4.10:   . 查找单个字符，除了换行和行结束符。【*】
+    console.log('.: "That is hot!".match(/h.t/g) -- ' + "That's hot!".match(/h.t/g));
+    //  4.11:   \w 查找单词字符(字母、数字、下划线)。【*】
+    console.log('\\w: "Give -_- 100%!".match(/\\w/g) -- ' + "Give -_- 100%!".match(/\w/g));
+    //  4.12:   \W 查找非单词字符。
+    console.log('\\W: "Give -_- 100%!".match(/\\W/g) -- ' + "Give -_- 100%!".match(/\W/g));
+    //  4.13:   \d 查找数字。
+    console.log('\\d: "Give 100%!".match(/\\d/g) -- ' + "Give 100%!".match(/\d/g));
+    //  4.14:   \D 查找非数字字符。
+    console.log('\\D: "Give 100%!".match(/\\D/g) -- ' + "Give 100%!".match(/\D/g));
+    //  4.15:   \s 查找空白字符(空格、tab、换行、回车)。
+    console.log('\\s: "Is this all there is?".match(/\\s/g) -- ' + "Is this all there is?".match(/\s/g));
+    //  4.16:   \S 查找非空白字符。
+    console.log('\\S: "Is this all there is?".match(/\\S/g) -- ' + "Is this all there is?".match(/\S/g));
+    //  4.17:   \b 匹配单词边界。【*】
+    console.log('\\b: "Hello jikexueyuan".match(/\\bHel/g) -- ' + "Hello jikexueyuan".match(/\bHel/g));
+    console.log('\\b: "Hello jikexueyuan".match(/n\\b/g) -- ' + "Hello jikexueyuan".match(/n\b/g));
+    //  4.18:   \B 匹配非单词边界。【*】
+    console.log('\\B: "Hello jikexueyuan".match(/\\Bjikexueyuan/g) -- ' + "Hello jikexueyuan".match(/\Bello jikexueyuan/g));
+    //  4.19:   \n 查找换行符。
+    console.log('\\n: "Hello Hunger.\\n Be a FE.".match(/\\n/g) -- ' + "Hello Hunger.\n Be a FE.".match(/\n/g));
+    //  4.20:   n+ 匹配任何包含至少一个 n 的字符串。【*】
+    console.log('n+: "Hello HHunger! Hello World!".match(/H+/g) -- ' + "Hello HHunger! Hello World!".match(/H+/g));
+    console.log('n+: "Hello Hunger! Hello World!".match(/\\w+/g) -- ' + "Hello Hunger! Hello World!".match(/\w+/g));
+    //  4.21:   n* 匹配任何包含零个或多个 n 的字符串。【*】
+    console.log('n*: "Hellooo Hunger! Hello World!".match(/lo*/g) -- ' + "Hellooo Hunger! Hello World!".match(/lo*/g));
+    //  4.22:   n? 匹配任何包含零个或一个 n 的字符串。
+    console.log('n?: "1, 100 or 1000?".match(/10?/g) -- ' + "1, 100 or 1000?".match(/10?/g));
+    //  4.23:   n{X} 匹配包含 X 个 n 的序列的字符串。
+    console.log('n{X}: "100, 1000 or 10000?".match(/\\d{4}/g) -- ' + "100, 1000 or 10000?".match(/\d{4}/g));
+    //  4.24:   n{X,Y} 匹配包含 X 或 Y 个 n 的序列的字符串。
+    console.log('n{X,Y}: "100, 1000 or 10000?".match(/\\d{3,4}/g) -- ' + "100, 1000 or 10000?".match(/\d{3,4}/g));
+    //  4.25:   n{X,} 匹配包含至少 X 个 n 的序列的字符串。
+    console.log('n{X,}: "100, 1000 or 10000?".match(/\\d{3,}/g) -- ' + "100, 1000 or 10000?".match(/\d{3,}/g));
+    //  4.26:   n$ 匹配任何结尾为 n 的字符串。
+    console.log('n$: "Is this his".match(/is$/g) -- ' + "Is this his".match(/is$/g));
+    //  4.27:   ^n 匹配任何开头为 n 的字符串。
+    console.log('^n: "Is this his".match(/^Is/g) -- ' + "Is this his".match(/^Is/g));
+
+    /*  5、常见正则 */
+    //  5.1:    汉字： [\u4e00-\u9fa5]【*】
+    console.log('汉字："I am 小明！".match(/[\\u4e00-\\u9fa5]/g) -- ' + "I am 小明！".match(/[\u4e00-\u9fa5]/g));
+    //  5.2:    手机号： 1[0-9]{10}
+    console.log('手机号：/1[0-9]{10}/.test("13112201239") -- ' + /1[0-9]{10}/.test("13112201239"));
+    //  5.3：    【?】邮箱： (\S)+[@]{1}(\S)+[.]{1}(\w)+
+    console.log('【?】邮箱：/(\\S)+[@]{1}(\\S)+[.]{1}(\\w)+/.test("@#￥xiaoming.@qq._com") -- ' + /(\S)+[@]{1}(\S)+[.]{1}(\w)+/.test("@#￥xiaoming.@qq._com"));
+
+    
+
+</script>
+</html>
